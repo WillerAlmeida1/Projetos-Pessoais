@@ -33,3 +33,42 @@ body {
   font-family: 'Quicksand';
   margin-left: 460px;
 }
+
+/* CORES DA F1 */
+
+.laranja {
+  color: #ff6b1c;
+}
+
+.alfa1 {
+  color: #fc8080;
+
+}
+
+.HAAS {
+  color: #e14035;
+}
+
+.alpine {
+  color: #03229e;
+}
+
+.rbr {
+  color: #02145c;
+}
+
+.aston {
+  color: #168f0b;
+}
+
+.ferrari {
+  color: #ff0000;
+}
+
+.williams {
+  color: #00197c;
+}
+
+.tamanho-tabela {
+  width: 50%;
+}
