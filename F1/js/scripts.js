@@ -4,3 +4,9 @@ function scrollToTop(){
     behavior: "smooth"
   })
 }
+
+
+function cursorOn() {
+  //
+}
+

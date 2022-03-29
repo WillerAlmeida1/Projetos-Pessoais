@@ -25,7 +25,7 @@ body {
 }
 
 .borda {
-  border-radius: 25px;
+  border-radius: 7px;
 }
 
 #page-title {
@@ -72,3 +72,14 @@ body {
 .tamanho-tabela {
   width: 50%;
 }
+
+.bg-fotos {
+  background-color: rgb(224, 224, 224);
+
+}
+
+.col-lg-4 {
+  padding-bottom: 15px;
+
+};
+
