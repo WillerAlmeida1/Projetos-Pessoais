@@ -1,46 +1,28 @@
-/*const Map = new Map();
+/* 
 
-myMap.set('Apple', 'Fruit');
+O objetivo é que a função receba um array e retorne ele caso o seu tamanho corresponda ao número enviado como parâmetro na função. Caso contrário, um erro será lançado.
 
-myMap.get(Apple);
-
-myMap.delete('Apple');
-
-myMap.get('Apple');
-
-const pessoas = new Map();
-pessoas.set('Willer', 'Admin');
-pessoas.set('Ingrid', 'Admin');
-pessoas.set('Gru', 'User');
-pessoas.set('Minion', 'User');
-
-function getAdmins(pessoas){
-  let Admins = pessoas.has('Admin')
-
-  for(Admins of pessoas){
-    console.log(Admins)
-  }
-
-};
-
-function getAdmins(pessoas)
-
+Crie uma função que recebe um array e um número
+Realize as seguintes validações
+Se os parâmetros não forem enviados, lance um erro do tipo ReferenceError
+Se o array não for do tipo 'object', lance um erro do tipo TypeError
+Se o número não for do tipo 'number', lance um erro do tipo TypeError
+Se o tamanho do array for diferente do número enviado como parâmetro, lance um erro do tipo RangeError
+Utilize a declaração try...catch
+Filtre as chamadas de catch por cada tipo de erro utilizando o operador instanceof
 
 */
 
-const myMap = new Map();
 
-myMap.set("Willer", 'Admin');
+function filtraPar(arr){
+  return arr.filter(callback);
+}
 
-//console.log(myMap.get('Willer'))
+function callback(item){
+  return item % 2 === 0;
+}
 
-function teste(myMap){
-  let testaAdm = myMap.get('Willer')
-  if(testaAdm == Admin) {
-    console.log('voa')
-  } else {
-    console.log('ero')
-  }
-};
+const meuArr = [1, 6, 4, 4, 19, 59, 79, 19, 66, 12];
 
-teste()
+console.log(filtraPar(meuArr))
+
