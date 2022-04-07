@@ -151,8 +151,8 @@ function reiniciar(){
   for (var i = 1; i <= 9; i++) {
     var quadrado = document.getElementById(i);
     
-    quadrado.style.background = '#eee'
-    quadrado.style.color = '#eee'
+    quadrado.style.background = '#242873'
+    quadrado.style.color = '#242873'
     quadrado.innerHTML = '-';
   }
 
