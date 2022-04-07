@@ -1,30 +1,59 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
+
 body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   text-align: center;
+  background-color: #78BFA5;
+}
+
+.titulo {
+  margin-top: 10px;
+  background: #242873;
+  cursor: pointer;
+  border-radius: 15px;
+  border-style: groove;
+  border: #F2DFBB;
+  font-weight: 1000;
+  position: relative;
+  box-shadow: 0 0 3.5px #F2DFBB;
+  color: #F2DFBB;
 }
 
 .quadrado {
+  background-color: #242873;
   text-align: center;
   width: 58px;
-  background-color: #eee;
   display: inline-block;
   padding: 48px;
   font-size: 68px;
   margin: 5px;
   cursor: pointer;
-  color: #eee;
+  color: #242873;
   user-select: none;
+  border-radius: 15px;
 }
 
 .jogador, .vencedor {
-  font-size: 38px;
+  font-size: 20px;
   margin-top: 10px;
+  color: #F2DFBB ;
+  background-color: #242873;
+  box-shadow: 0 0 2.5px #F2DFBB;
+  border-radius: 15px;
 }
 
 button {
   margin-top: 10px;
   width: 100px;
   height: 50px;
-  background: #eee;
+  background: #F2DFBB;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 15px;
+  border-style: groove;
+  border: #F2DFBB;
+  font-weight: 1000;
+  position: relative;
+  box-shadow: 0 0 2.5px #F2DFBB;
+  
 }
+
