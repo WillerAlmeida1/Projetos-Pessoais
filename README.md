@@ -15,7 +15,7 @@ Colocarei aqui vários projetos sejam pessoais ou de atividades em plataformas d
 Faltam algumas coisa como mudar a cor do 'X' e do 'O', quem sabe adicionar um contador de pontos e por ai vai
 
 
-##JOGO GENESIS
+## JOGO GENESIS
 
 
 
