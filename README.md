@@ -29,3 +29,10 @@ Faltam algumas coisa como mudar a cor do 'X' e do 'O', quem sabe adicionar um co
 
 ![unknown_2022 04 17-14 55](https://user-images.githubusercontent.com/89985304/163726577-f00309fb-e12c-4667-b119-9465c9c953c0.gif)
 
+
+## JOGO SPACE SHOOTER
+
+Jogo bom, e bom projeto para se fazer ainda mais para quem está iniciando
+
+![unknown_2022 04 17-18 40](https://user-images.githubusercontent.com/89985304/163734017-8de6e9ba-d3a8-4629-9aad-185bc0669822.gif)
+
