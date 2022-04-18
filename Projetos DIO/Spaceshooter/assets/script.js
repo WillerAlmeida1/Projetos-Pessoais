@@ -34,7 +34,7 @@ function moveUp() {
   }
 }
 
-//função descer
+//função para descer
 
 function moveDown() {
   let topPosition = getComputedStyle(yourShip).getPropertyValue('top');
