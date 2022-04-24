@@ -1,13 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
 
-class Button extends Component {
-  render(){
-    return(
-      <button>Salvar</button>
-    );
-  }
+function clicado(){
+  alert("clicado")
+}
+
+const Button = (props) => {
+  <button onClick={clicado()}>{props.children}</button>
 }
 
 
-export default Button;
 
+export default Button;

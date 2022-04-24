@@ -20,6 +20,7 @@ const App = () => {
     <div className="App">
       {primeiroJSX()}
       {sum(5, 5)}
+      <button>CLICA</button>
       <Button />
     </div>
     
