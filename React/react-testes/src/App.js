@@ -2,13 +2,22 @@ import React from 'react';
 import Button from './components/Button';
 import ReactDOM from 'react-dom';
 
-function App(){
+const buttonA = <button>HISTORICO DE CLIENTES</button> 
+
+const hasCostumer = false
+
+const App = () => {
   return (
     <div>
-        <Button>Salvar</Button>
+      <p>CLIENTES</p>
+
+      <div>
+        
+      </div>
     </div>
-  );
+  )
 }
+
 
 export default App;
 

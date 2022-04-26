@@ -1,32 +1,52 @@
-import React from "react"
-import ReactDOM from "react-dom"
-import "./styles.css"
-import Button from './components/Button/index'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './styles.css'
 
-let sum = (a, b) => {
-  return a + b
-}
+const listCustomer = [
+  {
+    id: 1,
+    name: 'Willer Almeida'
+  },
+  {
+    id: 2,
+    name: 'Ingrid Araujo'
+  },
+  {
+    id: 3,
+    name: 'Pedrita Almeida'
+  },
+  {
+    id: 4,
+    name: 'Jon Snow'
+  },
+]
 
-function primeiroJSX(){
-  return(
-    <div>
-      TESTES EM REACT
-    </div>
-  )
-}
+//const hasCostumer = true
+
+
+
 
 const App = () => {
-  return(
-    <div className="App">
-      {primeiroJSX()}
-      {sum(5, 5)}
-      <button>CLICA</button>
-      <Button />
+
+  const renderCustomers = (costumer, index) => {
+    return(
+      <li key={`costumer - ${costumer.id}`}> {costumer.name} </li>
+    )
+  }
+ 
+  return (
+    <div> 
+      <p>WILL INC</p>
+      {/*{hasCostumer ? renderShowHistory : renderCreateCostumer}*/}    
+      <div>
+        <ul>
+          {listCustomer.map(renderCustomers)}
+        </ul>
+      </div>   
     </div>
-    
   )
-
 }
+export default App
 
-const rootElement = document.getElementById("root")
-ReactDOM.render(<App/>, rootElement)
+const rootElement = document.getElementById('root')
+ReactDOM.render(<App />, rootElement)
