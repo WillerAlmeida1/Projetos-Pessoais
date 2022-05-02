@@ -3,7 +3,8 @@
 Colocarei aqui vários projetos sejam pessoais ou de atividades em plataformas de estudos.
 
 
-STARBUCKS ☕
+# STARBUCKS ☕
+
 🌎 Landing-page do Starbucks, feito com intuito de treinar habilidades que adquiri durante os meus estudos, resolvi fazer alguns projetos mais bem elaborados para estudar back-end com mais tranquilidade! 🌎
 
 ![image](https://user-images.githubusercontent.com/89985304/166249725-ef2446d9-7ba7-4625-a3d1-f2c1d6523deb.png)
