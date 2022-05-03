@@ -10,7 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "parcel-bundler": "^1.12.5"
+    "jquery": "^3.6.0",
+    "parcel-bundler": "^1.12.5",
+    "query": "^0.2.0"
   },
   "devDependencies": {
     "typescript": "^4.6.3"
