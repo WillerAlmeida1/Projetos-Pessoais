@@ -44,45 +44,59 @@ function escolhePokemon() {
         let escolhido = 'Pikachu'
         alert(`O pokemon escolhido foi o ${escolhido}.`)
       }
-     
-      ataque()
-      
-      function ataque(){
-        
-        let pokemons = [
-          {
-            nome: 'Charizard',
-            vida: 80,
-            ataque: 25
-          }
-      ]
-      
-      let adversario = 'Mewtwo'
-      let vidaDoAdversario = 100
-      let briga = pokemons.ataque - vidaDoAdversario
+    
+  }
+  ataque()
+}
 
-      alert(pokemons.ataque)
-      
-      alert(`A vida do ${adversario} é ${briga}`)
-    };
-    
-    
+function ataque(){
+        
+  let pokemons = 
+    {
+      nome: 'Charizard',
+      vida: 80,
+      ataque: 1000
+    }
+
+  let vidaDoAdversario = 100
+  let briga = vidaDoAdversario - pokemons.ataque    
+  let adversario = 'Mewtwo'
+
+
+alert(`A vida do ${adversario} é ${briga}`)
+
+
+
+function ataque2(){
   
+  let briga2 = pokemons.vida - pokemons.vida  
+  
+  alert(`sua vida é ${briga2}`)
   }
   
-}
+  function chamaBriga(){
+  
+    if(vidaDoAdversario > 0){
+  
+      ataque()
 
-//ATRIBUTOS
-function atributosPokemon(escolhido) {
-  ataqueDoPokemon = 25
-  vidaDoPokemon = 50
-}
+      console.log(vidaDoAdversario)
+    } else {
+  
+      alert('voce venceu')
+      
+    }
+  }
 
-//ATAQUE
-function ataque() {
-  dano = vidaDoAdversario - ataqueDoPokemon
-}
+ataque2()
+chamaBriga()
+};
+
+
+
+
 
 infoJogador()
 escolhePokemon()
-ataque()
+
+//POSSO CONSTRUIR UMA NOVA VARIAVEL PARA NOVO DANO ;;;;<<<<<<<----
