@@ -9,9 +9,12 @@ function infoJogador() {
 
   if (escolha == 'S') {
     tutorial()
-  } else {
-    escolhePokemon()
+
+  } else if (escolha == 'N') {
+
+    alert('Então vamos escolher seu Pokemon :D')
   }
+
 }
 
 //TUTORIAL DO JOGO
@@ -22,49 +25,52 @@ function tutorial() {
 
 //ESCOLHER O POKEMON
 function escolhePokemon() {
-  let pokemon = prompt('Escolha seu pokemon\n 1 - Charizard \n 2 - Gyarados, 3 - Pikachu')
+  let pokemon = Number(prompt('Escolha seu pokemon\n 1 - Charizard \n 2 - Gyarados \n 3 - Pikachu'))
 
-  //NUMERO DO POKEMON
+    if(pokemon >= 4){
 
-  if (pokemon == 1) {
-    let escolhido = 'Charizard'
-    pokemon = escolhido
-  } else if (pokemon == 2) {
-    let escolhido = 'Gyarados'
-    pokemon = escolhido
-  } else if (pokemon == 3) {
-    pokemon = escolhido
-  } else {
-    alert('ERRO')
-    escolhePokemon()
+      alert('Erro')
+      escolhePokemon()
+
+    } else {
+
+      if (pokemon == 1) {
+        let escolhido = 'Charizard'
+        alert(`O pokemon escolhido foi o ${escolhido}.`)
+      } else if (pokemon == 2) {
+        let escolhido = 'Gyarados'
+        alert(`O pokemon escolhido foi o ${escolhido}.`)
+      } else if (pokemon == 3) {
+        let escolhido = 'Pikachu'
+        alert(`O pokemon escolhido foi o ${escolhido}.`)
+      }
+     
+      ataque()
+      
+      function ataque(){
+        
+        let pokemons = [
+          {
+            nome: 'Charizard',
+            vida: 80,
+            ataque: 25
+          }
+      ]
+      
+      let adversario = 'Mewtwo'
+      let vidaDoAdversario = 100
+      let briga = pokemons.ataque - vidaDoAdversario
+
+      alert(pokemons.ataque)
+      
+      alert(`A vida do ${adversario} é ${briga}`)
+    };
+    
+    
+  
   }
-
-  let pokemons = [
-    {
-    nome: 'Charizard',
-    vida: 80,
-    ataque: 25
-    },
-
-    {
-      nome: 'Gyarados',
-      vida: 85,
-      ataque: 20
-    },
-
-    {
-      nome: 'Pikachu',
-      vida: 75,
-      ataque: 23
-    }
-  ]
-
-  //console.log(pokemons.ataque - 10)
-
-  alert(`O pokemon escolhido foi o ${pokemon}.`)
+  
 }
-
-
 
 //ATRIBUTOS
 function atributosPokemon(escolhido) {
@@ -78,3 +84,5 @@ function ataque() {
 }
 
 infoJogador()
+escolhePokemon()
+ataque()
