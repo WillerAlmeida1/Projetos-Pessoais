@@ -49,49 +49,67 @@ function escolhePokemon() {
   ataque()
 }
 
+//FUNÇÃO PARA ATAQUE DO JOGO
 function ataque(){
         
   let pokemons = 
     {
       nome: 'Charizard',
       vida: 80,
-      ataque: 1000
-    }
+      ataque: 85
+    };
 
-  let vidaDoAdversario = 100
-  let briga = vidaDoAdversario - pokemons.ataque    
-  let adversario = 'Mewtwo'
+  let adversario =
+   {
+    nome: 'Mewtwo',
+    vida: 280,
+    ataque: 95
+   };
+   
+   let batalha = adversario.vida - pokemons.ataque    
+   
+   adversario.vida = batalha;
 
-
-alert(`A vida do ${adversario} é ${briga}`)
-
-
-
-function ataque2(){
   
-  let briga2 = pokemons.vida - pokemons.vida  
-  
-  alert(`sua vida é ${briga2}`)
-  }
-  
-  function chamaBriga(){
-  
-    if(vidaDoAdversario > 0){
-  
-      ataque()
 
-      console.log(vidaDoAdversario)
-    } else {
+  console.log(`A vida do ${adversario.nome} é ${batalha}//teste ${adversario.vida}`)
+
+
+    
+    
+
+
+//chamabatalha()
+
+
+//CHAMA FUNÇÃO ATAQUE ENQUANTO INIMIGO TIVER VIDA
+/*function chamabatalha(){
   
-      alert('voce venceu')
+  if(batalha > 0){
+    
+    batalha
+    
+    console.log(batalha)
+    
+    } else if (batalha <= 0){
       
+      alert('voce venceu')
+    
     }
+    
   }
+  */
 
-ataque2()
-chamaBriga()
+  //FUNÇÃO PARA ATAQUE DO INIMIGO
+  function ataqueDoAdversario(){
+  
+  let batalha2 = pokemons.vida - pokemons.vida  
+  
+  alert(`sua vida é ${batalha2}`)
+  
+  }
+  
 };
-
 
 
 
