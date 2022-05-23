@@ -3,81 +3,69 @@ function dados() {
    pokemons = {
     nome: 'Charizard',
     vida: 80,
-    ataque: 50
+    ataque: 100
   }
 
    adversario = {
     nome: 'Mewtwo',
     vida: 280,
-    ataque: 95
+    ataque: 15
   }
 
 }
 
-function atacarDnv() {
+//Função de batalha entre os pokemons
+function duelo() {
 
-  let respostaAtaque = prompt('Você quer atacar?')
+  let respostaAtaque = prompt(`Adversário: ${adversario.nome} || HP: ${adversario.vida} || \nA: Atacar || B: Curar`)
 
-  if (respostaAtaque == 'S' && adversario.vida >= 0 && pokemons.vida >= 0) {
+  if (respostaAtaque == 'A' && adversario.vida >= 0 && pokemons.vida >= 0) {
+
     let batalha = adversario.vida - pokemons.ataque
 
     adversario.vida = batalha
 
-    alert(`A vida atual do ${adversario.nome} é ${adversario.vida}`)
-
-    if(pokemons.vida < 0){
-
-      alert(`Seu HP é: ${pokemons.vida}`)
-
-    } else {
-
-      alert('vc perdeu')
-
-    }
-    
-    alert(`Agora é a vez do ${adversario.nome}`)
-
-    let ataqueInimigo = pokemons.vida - adversario.ataque
-    
-    pokemons.vida = ataqueInimigo
+    adversarioDerrotado()
   
-
-    atacarDnv()
+    // Função de ataque do adversario.
+    ataqueAdversario()   
+  
+    // Chama função de batalha dnv se a condição for TRUE.
+    duelo()             
 
     } else {
 
-      (console.log('acabou'))
-
+      alert(`O ${pokemons.nome} foi derrotado.`)
+      //Função de restart <<<
     }
 
 }
-/*
+
+
 function ataqueAdversario(){
+  alert(`Agora é a vez do ${adversario.nome}`)
+  alert(`Seu HP é: ${pokemons.vida}`)
 
-  if(pokemons.vida > 0){
-    let ataqueInimigo = pokemons.vida - adversario.ataque
-    
-    pokemons.vida = ataqueInimigo
+  let ataqueInimigo = pokemons.vida - adversario.ataque
   
-    console.log(`Seu HP é: ${pokemons.vida}`)
-    ataqueAdversario()
-  } else {
+  pokemons.vida = ataqueInimigo
+}
 
-    console.log('perdeu')
+function adversarioDerrotado(){
+  if(adversario.vida > 0){
+      
+    alert(`A vida atual do ${adversario.nome} é ${adversario.vida}`)
+
 
   }
 }
 
-function checaAtaques(){
-  if(){
 
-  };
-}
-*/
+
 
 
 dados()
-atacarDnv()
+duelo()
 
 
 //vidaAnterior = pokemons.vida + adversario.ataque
