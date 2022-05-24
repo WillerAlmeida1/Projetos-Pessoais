@@ -1,96 +1,88 @@
-
-function loop(){
-  let i = 0
-
-  do {
-    i -= 2;
-    console.log(i);
-  } while (i > 5);
-}
-
-
-//ataque()
-
-
-function ataque(){
-        
-  let pokemons = 
-    {
+function jogo() {
+  function dados() {
+    pokemons = {
       nome: 'Charizard',
       vida: 80,
       ataque: 25
-    };
+    }
 
-  let adversario =
-   {
-    nome: 'Mewtwo',
-    vida: 280,
-    ataque: 95
-   };
-   
-   let batalha = adversario.vida - pokemons.ataque    
-   
-   adversario.vida = batalha;
-
-  function loop2(){
-    let i = adversario.vida
-
-    do {
-      i -= pokemons.ataque;
-      console.log(i);
-    } while (i > 5);
-    
-    adversario.vida = i
+    adversario = {
+      nome: 'Mewtwo',
+      vida: 280,
+      ataque: 50
+    }
   }
-  loop2()
-  
-  console.log(`A vida do ${adversario.nome} é ${batalha}//teste ${adversario.vida}`)
+
+  //Função de batalha entre os pokemons
+  function checaAtaque() {
+    respostaAtaque =
+      prompt(`Adversário: ${adversario.nome}🟪 || HP: ${adversario.vida}🩸 \nA: Atacar || B: Curar || C: Sair \n
+      Seu Pokemon: ${pokemons.nome} 🐲|| HP: ${pokemons.vida}🩸`)
+
+    if (pokemons.vida < 0 && adversario.vida < 0) {
+      ataquePokemon()
+      ataqueAdversario()
+      reiniciar()
+    } else if (respostaAtaque == 'a') {
+      // Função de ataque do adversario.
+      ataquePokemon()
+      // Função de ataque do adversario.
+      ataqueAdversario()
+      // Chama função de batalha dnv se a condição for TRUE.
+      checaAtaque()
+    } else if (
+      respostaAtaque != 'a' &&
+      respostaAtaque != 'b' &&
+      respostaAtaque != 'c'
+    ) {
+      alert(`Insira o 'A', 'B' ou 'C' para continuar!`)
+      checaAtaque()
+    } else if (respostaAtaque == 'c') {
+      confirm('Finalizar')
+    }
+  }
+
+  function ataquePokemon() {
+    if (adversario.vida >= 0) {
+      alert('É a sua vez 🐲')
+
+      alert(`o adversario recebeu ${pokemons.ataque} de dano 💥`)
+      let batalha = adversario.vida - pokemons.ataque
+
+      adversario.vida = batalha
+    } else if (adversario.vida <= 0) {
+      alert(`o ${adversario.nome} foi derrotado ❌🟪`)
+      reiniciar()
+    }
+  }
+
+  function ataqueAdversario() {
+    if (pokemons.vida >= 0) {
+      alert('Vez do Mewtwo 🟪')
+
+      alert(`Você recebeu ${adversario.ataque} de dano 💥`)
+      let ataqueInimigo = pokemons.vida - adversario.ataque
+
+      pokemons.vida = ataqueInimigo
+    } else if (pokemons.vida <= 0) {
+      alert(`o ${pokemons.nome} foi derrotado, você perdeu! ❌🐲`)
+      reiniciar()
+    }
+  }
+
+  function reiniciar() {
+    let gameOver = prompt('Quer jogar de novo?\n S - Sim || N - Não')
+    if (gameOver == 's') {
+      jogo()
+    } else {
+      alert('Obrigado por jogar!')
+    }
+  }
+
+  dados()
+  checaAtaque()
 }
 
+jogo()
 
-function atacar(){
-  let respostaAtaque = prompt('Você quer atacar?');
-
-  let pokemons = 
-  {
-    nome: 'Charizard',
-    vida: 80,
-    ataque: 25
-  };
-
-let adversario =
- {
-  nome: 'Mewtwo',
-  vida: 280,
-  ataque: 95
- };
- 
- 
- function atacarDnv(){
-   do {
-     
-     let batalha = adversario.vida - pokemons.ataque    
-     
-     adversario.vida = batalha;
-    
-      if(respostaAtaque == 'S'){
-        let i = adversario.vida
-        let briga = adversario.vida - pokemons.ataque
-    
-        adversario.vida = i
-    
-        console.log(`a vida agora é ${briga}`)
-    
-      } else {
-    
-        alert('Acaba aqui')
-    
-      }
-
-
-    } while (adversario.vida > 10);
-  }
-  atacarDnv()
-}
-
-atacar()
+//vidaAnterior = pokemons.vida + adversario.ataque

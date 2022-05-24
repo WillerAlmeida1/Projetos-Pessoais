@@ -1,71 +1,79 @@
 function dados() {
-
-   pokemons = {
+  pokemons = {
     nome: 'Charizard',
     vida: 80,
-    ataque: 100
+    ataque: 25
   }
 
-   adversario = {
+  adversario = {
     nome: 'Mewtwo',
     vida: 280,
-    ataque: 15
+    ataque: 50
   }
-
 }
 
 //Função de batalha entre os pokemons
 function duelo() {
+  respostaAtaque =
+    prompt(`Adversário: ${adversario.nome} || HP: ${adversario.vida} || \nA: Atacar || B: Curar || C: Sair \n
+  Seu Pokemon: ${pokemons.nome} || HP: ${pokemons.vida}`)
 
-  let respostaAtaque = prompt(`Adversário: ${adversario.nome} || HP: ${adversario.vida} || \nA: Atacar || B: Curar`)
-
-  if (respostaAtaque == 'A' && adversario.vida >= 0 && pokemons.vida >= 0) {
-
+  if (respostaAtaque == 'a' && adversario.vida >= 0 && pokemons.vida >= 0) {
     let batalha = adversario.vida - pokemons.ataque
 
     adversario.vida = batalha
 
-    adversarioDerrotado()
-  
     // Função de ataque do adversario.
-    ataqueAdversario()   
-  
+    ataqueAdversario()
+
     // Chama função de batalha dnv se a condição for TRUE.
-    duelo()             
-
-    } else {
-
-      alert(`O ${pokemons.nome} foi derrotado.`)
-      //Função de restart <<<
-    }
-
-}
-
-
-function ataqueAdversario(){
-  alert(`Agora é a vez do ${adversario.nome}`)
-  alert(`Seu HP é: ${pokemons.vida}`)
-
-  let ataqueInimigo = pokemons.vida - adversario.ataque
-  
-  pokemons.vida = ataqueInimigo
-}
-
-function adversarioDerrotado(){
-  if(adversario.vida > 0){
-      
-    alert(`A vida atual do ${adversario.nome} é ${adversario.vida}`)
-
-
+    duelo()
+    checaTrue()
+    atq()
+  } else if (
+    respostaAtaque != 'a' &&
+    respostaAtaque != 'b' &&
+    respostaAtaque != 'c'
+  ) {
+    alert(`Insira o 'A', 'B' ou 'C' para continuar!`)
+    duelo()
+  } else if (respostaAtaque == 'C') {
+    confirm('Finalizar')
+  } else if (pokemons.vida >= 0) {
+    alert(`O ${pokemons.nome} foi derrotado.`)
+    //Função de restart <<<
+  } else if (adversario.vida >= 0) {
+    alert(`O ${adversario.nome} foi derrotado.`)
+    //Função de restart <<<
   }
 }
 
+function ataqueAdversario() {
+  if (pokemons.vida > 0) {
+    alert('Vez do Mewtwo')
 
+    alert(`Você recebeu ${adversario.ataque} de dano`)
+    let ataqueInimigo = pokemons.vida - adversario.ataque
 
+    pokemons.vida = ataqueInimigo
+  } else if (pokemons.vida < 0) {
+  }
+}
 
+function checaTrue() {
+  if (respostaAtaque == 'a') {
+    respostaAtaque = true
+  }
+}
+
+function atq() {
+  if (respostaAtaque == true) {
+    console.log('deu certo')
+  }
+}
 
 dados()
 duelo()
 
-
 //vidaAnterior = pokemons.vida + adversario.ataque
+
