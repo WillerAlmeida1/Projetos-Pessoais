@@ -1,3 +1,4 @@
+//npx -p typescript tsc <-- usado para transpilar o codigo, para que o navegador possa ler.
 interface Veiculo {
   nome: string;
   placa: string;
