@@ -37,14 +37,20 @@ const expirationDate = document.querySelector('#expiration-date')
 const expirationDatePattern = {
   mask: "MM{/}YY",
   blocks: {
+    YY: {
+      mask:IMask.MaskedRange,
+      from: (string(new Date().getFullYear.slice(2))),
+      to: (string(new Date().getFullYear + 10))
+    },
     MM: {
       mask: IMask.MaskedRange,
       from: 1,
       to: 12
-    }
-  }
+    },
+  },
 }
 
+const expirationDateMasked = IMask(expirationDate, expirationDatePattern)
 
 
 const numCard = document.querySelector('#card-number')
