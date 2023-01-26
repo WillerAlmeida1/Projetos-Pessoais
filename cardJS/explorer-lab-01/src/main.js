@@ -20,7 +20,7 @@ function setCardType(type) {
 }
 
 
-globalThis.setCardType = setCardType
+globalThis.setCardType = setCardType('nubank')
 // setCardType('visa')
 
 //security code
