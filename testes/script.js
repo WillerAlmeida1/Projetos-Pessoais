@@ -1,34 +1,21 @@
-let bg = document.querySelector(".flex-container")
-let button = document.querySelector(".btn")
-let items = document.querySelector(".list-items")
-let texto = document.querySelector(".texto")
-let span = document.querySelector("span")
-let title = document.querySelector(".title")
-let bgtitle = document.querySelector("h1")
+//Obter os itens do html
+const button = document.querySelector("button")
+const txt = document.querySelector('.flex-container.txt')
+const container = document.querySelector(".flex-container")
+const body = document.querySelector("body")
 
+//Array com os itens
+let arr = [button, txt, container]
 
+//Função para mudar entre modo dark e light
 function mudaCor(){
   button.addEventListener('click', function(){
-   
-      bg.style.backgroundColor = 'Gainsboro'
-      button.style.backgroundColor = 'Gainsboro'
-      items.style.backgroundColor = 'Gainsboro'
-      texto.style.backgroundColor = 'Gainsboro'
-      bgtitle.setAttribute("style", "background-color: Gainsboro; color: rgb(90, 89, 89);")
-      span.setAttribute("style", "background-color: Gainsboro; color: Silver")
-    
+    body.classList.toggle('light')
+    for(i in arr){
+      arr[i].classList.toggle('light-others')
+    }
   })
 }
 
-/* 
-AJEITAR O FLEX CONTAINER E TENTAR MUDAR OQ TA DANDO ERRADO
-POR ALGUM MOTIVO OS LINKS NÃO ESTÃO MUDANDO AINDA TEM CAMINHO PRA DESCOBRIR
-CONSERTAR A LOGICA DE COMO MUDA A COR, TENTAR FAZER ALGO MELHOR
-*/
-
-
-
-//button.style.backgroundColor = 'red'
-
-
+//Chama a função
 mudaCor()
