@@ -84,3 +84,65 @@ const array = arr => {
 }
 
 console.log(array([23,3,4,798,45,76,79,1,3,2]))*/
+
+
+
+
+
+//COdigo daora que tu fez para alterar as cores no modo dark
+
+
+
+
+//TU pega o que precisa do html
+const button = document.querySelector("button")
+const txt = document.querySelector('.flex-container.txt')
+const container = document.querySelector(".flex-container")
+const body = document.querySelector("body")
+
+//o array com os itens do html
+let arr = [button, txt, container, body]
+
+//função 1 - ela pega e muda individualmento os estilos
+function mudaCor(){
+  button.addEventListener('click', function(){
+    container.style.backgroundColor = 'blue'
+    body.style.backgroundColor = 'blue'
+    txt.style.backgroundColor = 'blue'
+  })
+}
+
+//função 2 - ela pega todos e muda o estilo da maneira "automatica"
+function aplicaDark(arr){
+  for( i in arr){
+    arr[i].style.backgroundColor = "blue"
+  }
+}
+
+//função 3 - usa o metodo map para pegar tudo e criar um novo arr sem alterar o original
+function mudColor(){
+  button.addEventListener('click', function(){
+    aplDark(arr)
+  })
+}
+const aplDark = (arr) => {arr.map(pos => {pos.style.backgroundColor = 'red'})}
+
+
+//função 4 - muda apenas a classe ao inves de uma caracteristica especifica
+function mudColor(){
+  button.addEventListener('click', function(){
+    aplBlue(arr)
+  })
+}
+const aplBlue = (arr) => {arr.map(pos => {pos.classList.toggle('dark')})}
+
+
+
+
+
+
+
+//aplDark(arr)
+//aplicaDark(rr)
+//mudaCor()
+mudColor()
