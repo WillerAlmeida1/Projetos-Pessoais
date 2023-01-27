@@ -1,0 +1,135 @@
+*/* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li a {
+  text-decoration: none;
+}
+
+header {
+  background-color: #232323;
+  display: flex;
+  align-items: center;
+  color: aliceblue;
+}
+
+header .list-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.list-items li a{
+  color: aliceblue;
+}
+
+header .menu {
+  justify-content: space-between;
+}*/
+
+* {
+  margin: 5;
+  padding: 5;
+  font-family: sans-serif;
+  background-color: rgb(90, 89, 89)
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li a {
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: rgb(90, 89, 89);
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.list-items li a {
+  display: flex;
+  color: rgb(90, 89, 89);
+  font-weight: 700;
+  margin-right: 10px;
+  background-color: #333;
+  font-size: 20px;
+}
+
+li {
+  background-color: #333;
+}
+
+.list-items {
+  display: flex;
+}
+
+.flex-container h1 {
+  background-color: #333;
+}
+
+span {
+  background-color: #333;
+  color: yellow;
+}
+
+.btn {
+  background-color: rgb(90, 89, 89);
+  color: #fff;
+  text-align: center;
+  border-radius: 30px;
+  width: 120px;
+  display: block;
+  text-decoration: none;
+  height: 50px;
+  line-height: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  justify-content: flex-start;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+/*.texto {
+  display: flex;
+  justify-content: center;
+  max-width: 400px;
+  text-align: center;
+}*/
+
+
+.texto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 600px;
+}
