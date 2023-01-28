@@ -1,68 +1,46 @@
-const button = document.querySelector("button")
-const txt = document.querySelector('.flex-container.txt')
-const container = document.querySelector(".flex-container")
-const body = document.querySelector("body")
-
-let arr = [button, txt, container]
-function mudaCor(){
-  button.addEventListener('click', function(){
-    body.classList.toggle('light')
-    for(i in arr){
-      arr[i].classList.toggle('light-others')
-    }
-  })
-}
-
-mudaCor()
+// const caixaDeTexto = document.getElementById('caixa-texto')
+// const caixaDeTexto2 = document.getElementById('caixa-texto2')
+// const botao = document.getElementById('button')
+// const botao2 = document.getElementById('button2')
+// const mais = document.getElementById('mais')
 
 
-//let arr = [button, txt, container, body]
-/*
-function mudColor(){
-  button.addEventListener('click', function(){
-    aplLigth(arr)
-  })
-}
-const aplLigth = (arr) => {arr.map(pos => {pos.classList.toggle('ligth')})}
-*/
-//const aplDark = (arr) => {arr.map(pos => {pos.style.backgroundColor = 'red'})}
+// function pegaTexto(){
+//   botao.addEventListener('click', function(){
+//     let pegaPalavra = parseInt(caixaDeTexto.value)
+//     console.log(pegaPalavra)
+//   })
+// }
+
+// function pegaTexto2(){
+//   botao2.addEventListener('click', function(){
+//     let pegaPalavra = parseInt(caixaDeTexto2.value)
+//     console.log(pegaPalavra)
+//   })
+// }
+
+// function sum(){
+//   mais.addEventListener('click', function(){
+//     console.log(parseInt(caixaDeTexto.value) + parseInt(caixaDeTexto2.value))
+//   })
+// }
+// //const soma = (a, b) => {return a + b}
+
+// pegaTexto()
+// pegaTexto2()
+// sum(caixaDeTexto.value, caixaDeTexto2.value)
 
 
-
-
-//aplDark(arr)
-//aplicaDark(rr)
-//mudaCor()
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-function mudaCor(){
-  button.addEventListener('click', function(){
-    container.style.backgroundColor = 'blue'
-    body.style.backgroundColor = 'blue'
-    txt.style.backgroundColor = 'blue'
-  })
-}
-
-function aplicaDark(arr){
-  for( i in arr){
-    arr[i].style.backgroundColor = "blue"
+const user = {
+  nome: 'carlos',
+  idade: 18,
+  cargos : {
+    junior: 'junior 1',
+    pleno: 'ainda nao'
   }
 }
 
-function mudColor(){
-  button.addEventListener('click', function(){
-    aplDark(arr)
-  })
-}
-*/
+const { nome, idade } = user
+const { pleno } = user.cargos
+
+console.log(pleno)
