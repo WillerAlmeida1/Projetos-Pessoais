@@ -31,16 +31,55 @@
 // sum(caixaDeTexto.value, caixaDeTexto2.value)
 
 
-const user = {
-  nome: 'carlos',
-  idade: 18,
-  cargos : {
-    junior: 'junior 1',
-    pleno: 'ainda nao'
-  }
-}
+// const site = {
+//   nome : 'espacial',
+//   tipo : 'novo'
+// }
 
-const { nome, idade } = user
-const { pleno } = user.cargos
+// const { nome, tipo } = site
 
-console.log(pleno)
+// console.log(nome)
+
+
+// const site2 = {
+//   nome2 : 'navios',
+//   tipo2 : 'novo'
+// }
+
+// const { nome2, tipo2 } = site2
+
+// console.log(nome2)
+
+// let pessoa = {
+//   nome : 'Alvin',
+//   dizerNome: function(){
+//     console.log(`O meu nome é ${this.nome}`)
+//   }
+// }
+
+// pessoa.dizerNome();
+
+
+
+// class menu {
+//   constructor(menu) {
+//     this.menuElement = document.querySelector(menu);
+//   }
+
+//   addActiveEvent() {
+//     this.menuElement.addEventListener('click', function(event) {
+//       event.target.classList.add("active");
+//     });
+//   }
+// }
+
+// const menu = new menu(".principal");
+// menu.addActiveEvent();
+// console.log(menu)
+
+
+const nums = [1,2,6,48,9,8,4,651,2311,58]
+
+const retornaOmaior = (arr) => { return arr.sort(function(a,b){return a - b}).reverse().slice(0,1)}
+
+console.log(retornaOmaior(nums))
