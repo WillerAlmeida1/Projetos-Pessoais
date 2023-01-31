@@ -1,9 +1,21 @@
-import $ from 'jquery';
 
-$.fn.extend({
-  novaFuncao() {
-    console.log('Chamou Nova Funcao');
-  }
-});
+interface User {
+  name: string,
+  age: number,
+  carro: true,
+  casa: true,
+  email: string,
+  cpf: number
+}
 
-$('body').novaFuncao();
+const user: User = { 
+  name: 'Carlos',
+  age: 21,
+  carro: true,
+  casa: true,
+  email: 'contato@gmail.com',
+  cpf: 51495201898
+}  
+
+
+console.log(user)

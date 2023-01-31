@@ -110,45 +110,54 @@
 //   })
 // }
 
-const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-const somaNums = array => {
-  return array.reduce((acc, item) => {
-    return acc + item
-  })
-}
+// const somaNums = array => {
+//   return array.reduce((acc, item) => {
+//     return acc + item
+//   })
+// }
 //console.log(somaNums(nums))
 
-const dados = [
-  'Carlos',
-  'Ana',
-  'R$ 500',
-  'R$ 110',
-  'U$ 20',
-  'U$ 52',
-  '',
-  '',
-  ''
-]
+// const dados = [
+//   'Carlos',
+//   'Ana',
+//   'R$ 500',
+//   'R$ 110',
+//   'U$ 20',
+//   'U$ 52',
+//   '',
+//   '',
+//   ''
+// ]
 
-const somaValoresFilter = arr => {
-  return arr.filter(item => {
-    return item.includes('R$') || item.includes('U$')
-  })
-}
+// const somaValoresFilter = arr => {
+//   return arr.filter(item => {
+//     return item.includes('R$') || item.includes('U$')
+//   })
+// }
 
-const apenasNum = outraFunc => {
-  return somaValoresFilter(outraFunc).map(item => {
-    return Number(item.replace('R$ ', '').replace('U$ ', ''))
-  })
-}
+// const apenasNum = outraFunc => {
+//   return somaValoresFilter(outraFunc).map(item => {
+//     return Number(item.replace('R$ ', '').replace('U$ ', ''))
+//   })
+// }
 
-const somaOsValores = func => {
-  return func.reduce((acc, item) => {
-    return acc + item
-  })
-}
+// const somaOsValores = func => {
+//   return func.reduce((acc, item) => {
+//     return acc + item
+//   })
+// }
 
-console.log(somaOsValores(apenasNum(somaValoresFilter(dados))))
-console.log(apenasNum(somaValoresFilter(dados)))
+// console.log(somaOsValores(apenasNum(somaValoresFilter(dados))))
+// console.log(apenasNum(somaValoresFilter(dados)))
 //console.log(somaValoresFilter(dados))
+
+
+let number = 2
+
+if(number === 3 ){
+  console.log(number.valueOf(function(){
+    
+  }))
+}
