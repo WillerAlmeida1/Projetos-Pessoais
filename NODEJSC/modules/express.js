@@ -7,6 +7,11 @@ const app = express()
 //Para usar o .json sem erros no postman
 app.use(express.json())
 
+//Usando EJS
+app.set('view engine', 'ejs')
+app.set('views', 'src/views') 
+
+
 //Middleware
 app.use((req, res, next) => {
   console.log(`Request Type: ${req.method}`)
@@ -14,6 +19,13 @@ app.use((req, res, next) => {
   console.log(`Date: ${new Date()}`)
 
   next()
+})
+
+//Criando nova EndPoint - Para EJS
+app.get('/views/users', async (req, res) =>{
+  const users = await userModel.find({})
+
+  res.render('index', { users })
 })
 
 //Para procurar um usuario em /users
