@@ -1,32 +1,29 @@
-//Rest é um conjunto de regrinhas <<<<-----
+// const http = require('http')
+// const host = 'http://localhost:'
+// const port = 8080
 
-//GET:
-//Sempre obtem os dados
+// const server = http.createServer((req, res)=>{
+//   res.end('<h1>Funcionando</h1>')
+// })
 
-//POST:
-//Cria um novo registro ou recurso
-
-//PUT:
-//Atualiza um registro existente
-
-//DELETE:
-//Remove um registro existente
-
-//\\
-
-//Padrões
-//EndPoints <<-- é um "caminho"
+// server.listen(port, () => console.log(`Rodando na porta ${host}${port}`))
 
 
-//GET: /api/dev/user
-//POST: /api/dev/user
-//PUT: /api/dev/user/{id}
-//DELETE: /api/dev/user/{id}
+const express = require('express')
+const app = express();
+const host = 'http://localhost:'
+port = 8080
 
-//STATUS CODE
+app.get('/', (req, res) => {
+  res.end('<h1>Funcionando com express</h1>')
+})
 
-//GERALMENTE: 
+app.get('/outramsg', (req, res)=>{
+  res.end('<h1>OUtra msg</h1>')
+})
 
-//2... = Sucesso
-//4... = Erro no cliente
-//5... = Erro server side
+app.get('/outramsg/msg', (req, res) => {
+  res.end('<h1>Mensagem aninhada</h1>')
+})
+
+app.listen(port, () => console.log(`Rodando no ${host}${port}`))
