@@ -154,10 +154,61 @@
 //console.log(somaValoresFilter(dados))
 
 
-let number = 2
+// let number = 2
 
-if(number === 3 ){
-  console.log(number.valueOf(function(){
+// if(number === 3 ){
+//   console.log(number.valueOf(function(){
     
-  }))
-}
+//   }))
+// }
+
+
+
+
+//CLASSES
+
+
+// class Person {
+//   constructor(name){
+//     this.name = name
+//   }
+// }
+
+// let person = new Person('Silva')
+
+
+// console.log(person.name)
+
+
+// class Monstro {
+//   constructor(nome, atk, def){
+//     this.nome = nome
+//     this.atk = atk
+//     this.def = def
+//   }
+
+//   chamaMon(){
+//     console.log(`o nome é ${this.nome}, o ataque é ${this.atk} e a def ${this.def}`)
+//   }
+// }
+
+
+// const monstro1 = new Monstro('Ghidorah', '5000', '4000')
+
+// monstro1.chamaMon()
+
+
+// class MonstroInimigo extends Monstro {
+//   constructor(nome, historia, atk) {
+//     super(nome, atk)
+//     this.historia = historia
+//   }
+
+//   logSimples(){
+//     console.log(`O monstro ${this.nome} é de ${this.historia} e tem ${this.atk}`);
+//   }
+// }
+
+// const monstrengo = new MonstroInimigo('Godzilah', 'Japao', '8000')
+
+// monstrengo.logSimples()
