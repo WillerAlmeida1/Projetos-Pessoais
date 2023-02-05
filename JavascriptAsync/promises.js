@@ -29,16 +29,27 @@ const getVideoDetails = (video) => {
   })
 }
 
-const displayUser = async () => {
-  try {
-    const user = await loginUser('aaa@gmail.com', '123456789')
-    const videos = await getUserVideos(user.email)
-    const videoDetails = await getVideoDetails(videos[0])
+loginUser('aaa@gmail.com', '123456789')
+.then((user) => getUserVideos(user.email))
+.then((videos) => getVideoDetails(videos[0]))
+.then((getVideoDetails) => console.log({ getVideoDetails }))
+.catch((error) => console.log({ error }))
 
-    console.log({videoDetails})
-  } catch (error) {
-    console.log({ error })
-  }
-}
+//Promisse.all
 
-displayUser()
+const yt = new Promise((resolve) => {
+  setTimeout(() => {
+    resolve('videos from youtube')
+  }, 2000)
+})
+
+const fb = new Promise((resolve) => {
+  setTimeout(() => {
+    resolve('posts from facebook')
+  }, 5000)
+})
+
+Promise.all([yt, fb]).then((result) => {
+  console.log({ result })
+})
+
