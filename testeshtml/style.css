@@ -1,0 +1,34 @@
+body {
+  background-color: silver;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(73, 73, 73);
+  padding: 20px;
+  align-items: center;
+  border-radius: 15px;
+  color: antiquewhite;
+}
+
+.lista {
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+  gap: 30px;
+  font-size: 20px;
+}
+
+.li-item a {
+  text-decoration: none;
+  color: white;
+}
+
+section {
+  background-color: rgb(73, 73, 73);
+  color:white;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 20px
+}
