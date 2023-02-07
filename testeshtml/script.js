@@ -212,3 +212,79 @@
 // const monstrengo = new MonstroInimigo('Godzilah', 'Japao', '8000')
 
 // monstrengo.logSimples()
+
+
+// const loginUser = (email, password) => {
+//   setTimeout(()=>{
+
+//   },2000)
+//   return new Promise((resolve, reject) => {
+//     const error = false
+
+//     if(error) {
+//       reject(new Error('error in login'))
+//     }
+
+//     console.log("usuario logado")
+//     resolve({email})
+//   })
+// }
+
+// loginUser('aa@gmail.com', '123456').then((user) => {
+//   console.log({user})
+// })
+
+
+// Criar uma função que retorna uma Promise resolvida com um valor aleatório após um tempo específico. Em seguida, utilize o await para esperar a resolução da Promise e imprimir o valor retornado.
+
+
+// const retornaNumAleatorio = () => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       const error = false
+//       if(error){
+//         reject(new Error(error.message))
+//       }
+//       const num = Math.random()
+//       resolve(num)
+//     }, 1000)
+//   })
+// }
+
+// const retornaPromise = async () => {
+//   try {
+//     const numAleatorio = await retornaNumAleatorio()
+//     console.log(numAleatorio)
+//   } catch (e){
+//     console.log(e)
+//   }
+// }
+
+// retornaPromise()
+
+const http = require('http');
+const host = 'http://localhost:';
+const port = 8080;
+
+const server = http.createServer((req, res) => {
+  res.end('<h1>Esta rodando</h1>')
+})
+
+
+const retornaFrase = async () => {
+  try {
+    const fraseAleatoria = await fetch('https://api.adviceslip.com/advice')
+    const frase = await fraseAleatoria.json()
+    res.write(`<h1>${frase.slip.advice}</h1>`);
+    res.end();
+  } catch (e) {
+    console.log(e.message)
+  }
+}
+
+retornaFrase()
+
+
+
+
+server.listen(port, () => {console.log(`rodando em ${host}${port}`)})

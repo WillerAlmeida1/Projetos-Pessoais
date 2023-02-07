@@ -9,21 +9,46 @@
 // server.listen(port, () => console.log(`Rodando na porta ${host}${port}`))
 
 
-const express = require('express')
+// const express = require('express')
+// const app = express();
+// const host = 'http://localhost:'
+// port = 8080
+
+// app.get('/', (req, res) => {
+//   res.end('<h1>Funcionando com express</h1>')
+// })
+
+// app.get('/outramsg', (req, res)=>{
+//   res.end('<h1>OUtra msg</h1>')
+// })
+
+// app.get('/outramsg/msg', (req, res) => {
+//   res.end('<h1>Mensagem aninhada</h1>')
+// })
+
+// app.listen(port, () => console.log(`Rodando no ${host}${port}`))
+
+const express = require('express');
 const app = express();
-const host = 'http://localhost:'
-port = 8080
+const port = 8080;
 
 app.get('/', (req, res) => {
-  res.end('<h1>Funcionando com express</h1>')
-})
+  retornaFrase().then((frase) => {
+    res.send(`<h1>Esta rodando</h1><p>${frase}</p>`);
+  });
+});
 
-app.get('/outramsg', (req, res)=>{
-  res.end('<h1>OUtra msg</h1>')
-})
+const retornaFrase = async () => {
+  try {
+    const fraseAleatoria = await fetch('https://api.adviceslip.com/advice')
+    const frase = await fraseAleatoria.json()
+    const advice = frase.slip.advice;
+    return advice.innetText
+  } catch (e) {
+    console.log(e.message)
+  }
+}
 
-app.get('/outramsg/msg', (req, res) => {
-  res.end('<h1>Mensagem aninhada</h1>')
-})
-
-app.listen(port, () => console.log(`Rodando no ${host}${port}`))
+app.listen(port, () => {
+  console.log(`Servidor rodando em http://localhost:${port}`);
+});
