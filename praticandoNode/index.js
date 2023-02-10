@@ -8,7 +8,6 @@
 
 // server.listen(port, () => console.log(`Rodando na porta ${host}${port}`))
 
-
 // const express = require('express')
 // const app = express();
 // const host = 'http://localhost:'
@@ -28,27 +27,26 @@
 
 // app.listen(port, () => console.log(`Rodando no ${host}${port}`))
 
+const fetch = require('node-fetch')
 const express = require('express');
-const app = express();
-const port = 8080;
+const app = express()
+const port = 8080
 
 app.get('/', (req, res) => {
-  retornaFrase().then((frase) => {
-    res.send(`<h1>Esta rodando</h1><p>${frase}</p>`);
-  });
-});
 
-const retornaFrase = async () => {
-  try {
-    const fraseAleatoria = await fetch('https://api.adviceslip.com/advice')
-    const frase = await fraseAleatoria.json()
-    const advice = frase.slip.advice;
-    return advice.innetText
-  } catch (e) {
-    console.log(e.message)
+  const api = async() => {
+    try {
+      const response = await fetch('https://api.adviceslip.com/advice')
+      const data = await response.json()
+      res.json(data)
+    } catch (error) {
+      req.sendStatus(500)
+    }
   }
-}
+
+  api()
+});
 
 app.listen(port, () => {
-  console.log(`Servidor rodando em http://localhost:${port}`);
-});
+  console.log(`Servidor rodando em http://localhost:${port}`)
+})
