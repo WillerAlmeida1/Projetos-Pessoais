@@ -46,3 +46,8 @@ Jogo bom, e bom projeto para se fazer ainda mais para quem está iniciando
 
 ![unknown_2022 04 17-18 40](https://user-images.githubusercontent.com/89985304/163734017-8de6e9ba-d3a8-4629-9aad-185bc0669822.gif)
 
+## Buscador CEP
+
+Projeto usando consumindo API de CEP's que retorna os dados como rua, estado, uf
+
+![image](https://user-images.githubusercontent.com/89985304/218832483-f5c433fc-558d-4db2-b103-fa67dddddc43.png)
