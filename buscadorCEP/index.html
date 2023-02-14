@@ -5,33 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
+    
   </head>
 
   <body>
-    <h1>Consulta de CEP</h1>
+    <header>
+      <!--Titulo-->
+      <h1>Consulta de CEP</h1>
+    </header>
 
-    <div class="form-group">
-      <label for="cep">CEP: </label
-      ><input id="cep" type="text" class="form-control" /><small>00000-000</small>
-      <button class="button">Enviar</button>
+    <!--Conteudo principal-->
+    <div class="conteudo">
+      <p class="area-texto">
+        <label>CEP: </label>
+        <input id="cep" type="text"/><small> 00000-000 </small>
+        <button class="button">Enviar</button>
+      </p>
+      <!--Resultado da busca-->
+      <h3>Resultado da sua consulta: </h3>
+      <p id="resultado">
+        
+      </p>
     </div>
-    <div class="form-group">
-      <label for="">Rua: </label
-      ><input type="text" class="form-control" /><small>Logradouro</small>
-    </div>
-    <div class="form-group">
-      <label for="">Bairro</label
-      ><input type="text" class="form-control" /><small>Bairro</small>
-    </div>
-    <div class="form-group">
-      <label for="">Localidade</label
-      ><input type="text" class="form-control" /><small>Cidade</small>
-    </div>
-    <div class="form-group">
-      <label for="">UF</label
-      ><input type="text" class="form-control" /><small>Estado</small>
-    </div>
+    
 
+    <footer>
+      Desenvolvido por <a href="#"> @Willer</a>
+    </footer>
     <script src="./index.js"></script>
   </body>
 </html>
