@@ -262,29 +262,4 @@
 
 // retornaPromise()
 
-const http = require('http');
-const host = 'http://localhost:';
-const port = 8080;
-
-const server = http.createServer((req, res) => {
-  res.end('<h1>Esta rodando</h1>')
-})
-
-
-const retornaFrase = async () => {
-  try {
-    const fraseAleatoria = await fetch('https://api.adviceslip.com/advice')
-    const frase = await fraseAleatoria.json()
-    res.write(`<h1>${frase.slip.advice}</h1>`);
-    res.end();
-  } catch (e) {
-    console.log(e.message)
-  }
-}
-
-retornaFrase()
-
-
-
-
-server.listen(port, () => {console.log(`rodando em ${host}${port}`)})
+//fetch('https://api.adviceslip.com/advice').then((response) => console.log(response.json()))
