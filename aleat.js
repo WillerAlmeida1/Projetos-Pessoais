@@ -64,7 +64,7 @@ function codigoBinario(codigo){
 console.log(codigoBinario('--..'))
 
 
-
+const teste = () => {}
 
 
 
