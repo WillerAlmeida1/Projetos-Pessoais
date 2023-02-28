@@ -4,6 +4,7 @@ const btn = document.querySelectorAll('.teclas button');
 //Trasnforma nodeList em um array
 const arr = [...btn];
 
+//Teste
 
 for(i in arr){
 
