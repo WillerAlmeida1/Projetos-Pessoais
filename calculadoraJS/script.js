@@ -1,20 +1,37 @@
 //Trás todos os botões
 const btn = document.querySelectorAll('.teclas button');
+let campo = []
+const simbols = ['+', '-', '*', '/']
+//Percorre o array de botões e retorna o valor
+//Ao ser clicado
+const percorreArr = (arr) => {
+  arr.forEach(e => {
+    e.addEventListener('click', ()=>{
+      campo.push(e.innerText)
+      return campo
+    })
+  });
+}
 
-//Trasnforma nodeList em um array
-const arr = [...btn];
-
-//Teste
-
-for(i in arr){
-
- // console.log(arr[i].innerHTML)
-
-  arr[i].addEventListener('click', ()=> {
-    console.log(arr[i])
-  })
+const fazConta2 = (arr) => {
+  setTimeout(()=>{
+    campo = campo.join('')
+    console.log(campo)
+    return campo
+  },2000)
 }
 
 
+const fazConta = (arr) => { setTimeout(()=>{
+  arr.map((i)=> {
+    //return arr[i].split(',').join('')
+  })
+  // arr.join(',').push(arr)
+  console.log(arr)
+  return arr
+}, 2000)
+}
 
-console.log(arr[0].innerHTML)
+percorreArr(btn)
+fazConta(campo)
+fazConta2(campo)
