@@ -1,37 +1,37 @@
 //Trás todos os botões
 const btn = document.querySelectorAll('.teclas button');
-let campo = []
+const equal = document.querySelector('.equal')
 const simbols = ['+', '-', '*', '/']
-//Percorre o array de botões e retorna o valor
-//Ao ser clicado
-const percorreArr = (arr) => {
+let painel = document.querySelector('.painel')
+
+
+const mostraValor = (arr) => {
   arr.forEach(e => {
-    e.addEventListener('click', ()=>{
-      campo.push(e.innerText)
-      return campo
+    e.addEventListener('click', () => {
+      let value = e.innerText
+      resultado = painel.innerText += value
+      console.log(`${resultado}`)
+      return resultado
     })
-  });
-}
-
-const fazConta2 = (arr) => {
-  setTimeout(()=>{
-    campo = campo.join('')
-    console.log(campo)
-    return campo
-  },2000)
-}
-
-
-const fazConta = (arr) => { setTimeout(()=>{
-  arr.map((i)=> {
-    //return arr[i].split(',').join('')
   })
-  // arr.join(',').push(arr)
-  console.log(arr)
-  return arr
-}, 2000)
 }
 
-percorreArr(btn)
-fazConta(campo)
-fazConta2(campo)
+const fazOperacoes = (nums) => {
+  nums = eval(nums)
+  painel.innerText = nums
+  painel -= equal.innerText
+  return
+}
+
+equal.addEventListener('click', () => {
+  fazOperacoes(resultado)
+})
+
+
+
+mostraValor(btn)
+
+// Fazer uma funcao que recebe os valores de simbolos, as operacoes e outra funcao
+// que percorre a string ve se ela possui um simbolo "x" e dentro disso a gente manda
+// outra funcao para percorrer e se temos o simbolo "x", e o simbolo "x" é = simbolo "x"
+// entao operecao = "x"
