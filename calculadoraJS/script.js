@@ -1,6 +1,7 @@
 //Trás todos os botões
 const btn = document.querySelectorAll('.teclas button');
 const equal = document.querySelector('.equal')
+const clean = document.querySelector('.c')
 const simbols = ['+', '-', '*', '/']
 let painel = document.querySelector('.painel')
 
@@ -20,11 +21,15 @@ const fazOperacoes = (nums) => {
   nums = eval(nums)
   painel.innerText = nums
   painel -= equal.innerText
-  return
+  return painel
 }
 
 equal.addEventListener('click', () => {
   fazOperacoes(resultado)
+})
+
+clean.addEventListener('click', () => {
+  painel.innerText -= ''
 })
 
 
