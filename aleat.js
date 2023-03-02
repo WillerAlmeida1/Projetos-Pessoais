@@ -146,3 +146,48 @@ const aplBlue = (arr) => {arr.map(pos => {pos.classList.toggle('dark')})}
 //aplicaDark(rr)
 //mudaCor()
 mudColor()
+
+
+
+
+
+
+
+
+//Trás todos os botões
+const btn = document.querySelectorAll('.teclas button');
+const equal = document.querySelector('.equal')
+const clean = document.querySelector('.c')
+const simbols = ['+', '-', '*', '/']
+let painel = document.querySelector('.painel')
+
+
+const mostraValor = (arr) => {
+  arr.forEach(e => {
+    e.addEventListener('click', () => {
+      let value = e.innerText
+      resultado = painel.innerText += value
+      console.log(`${resultado}`)
+      return resultado
+    })
+  })
+}
+
+const fazOperacoes = (nums) => {
+  nums = eval(nums)
+  painel.innerText = nums
+  painel -= equal.innerText
+  return painel
+}
+
+equal.addEventListener('click', () => {
+  fazOperacoes(resultado)
+})
+
+clean.addEventListener('click', () => {
+  painel.innerText -= ''
+})
+
+
+
+mostraValor(btn)
